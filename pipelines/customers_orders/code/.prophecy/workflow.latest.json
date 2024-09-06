@@ -7,8 +7,8 @@
     "codeGenConfiguration" : {
       "editableConfig" : false,
       "plibVersion" : {
-        "mavenVersion" : "8.1.0",
-        "pyPiVersion" : "1.9.10"
+        "mavenVersion" : "8.2.0-SNAPSHOT",
+        "pyPiVersion" : "1.9.16"
       }
     },
     "id" : "1",
@@ -412,13 +412,13 @@
       "metadata" : {
         "label" : "reformat_data",
         "slug" : "reformat_data",
-        "x" : 760,
-        "y" : -60,
+        "x" : 860,
+        "y" : 40,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
         "isImported" : false,
-        "comment" : "Streamlines customer account data by selecting key information for easier analysis.",
+        "comment" : "Streamlines customer account data by selecting key information for analysis.",
         "autoUpdateComment" : true
       },
       "ports" : {
@@ -514,17 +514,10 @@
             "expression" : "col(\"first_name\")"
           },
           "description" : ""
-        }, {
-          "target" : "last_name",
-          "expression" : {
-            "format" : "python",
-            "expression" : "col(\"last_name\")"
-          },
-          "description" : ""
         } ],
         "importString" : "",
         "activeTab" : "expressions",
-        "columnsSelector" : [ "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##first_name", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##order_id", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##account_open_date", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##amount", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##last_name" ]
+        "columnsSelector" : [ "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##amount", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##order_id", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##first_name", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##account_open_date" ]
       },
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=&tag=0.2.27.dev2&projectSubscriptionProjectId=42&path=gems/Reformat",

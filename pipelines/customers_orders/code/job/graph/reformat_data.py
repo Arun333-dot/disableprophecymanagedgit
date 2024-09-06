@@ -7,4 +7,4 @@ from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
 def reformat_data(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.select(col("account_open_date"), col("order_id"), col("amount"), col("first_name"), col("last_name"))
+    return in0.select(col("account_open_date"), col("order_id"), col("amount"), col("first_name"))
