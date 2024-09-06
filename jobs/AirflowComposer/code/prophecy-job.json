@@ -1,0 +1,169 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "2393",
+    "jobId" : "jobs/AirflowComposer",
+    "name" : "AirflowComposer",
+    "dagName" : "staging_abhisheks_e2etests_HelloWorld_AirflowComposer",
+    "schedule" : "None",
+    "enabled" : true,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "NzIaMKxWfPi3kpndADjR2$$BCXmjdjFWzqz0s_KPvXSo" : {
+      "id" : "NzIaMKxWfPi3kpndADjR2$$BCXmjdjFWzqz0s_KPvXSo",
+      "component" : "Python",
+      "metadata" : {
+        "label" : "Python_0",
+        "slug" : "Python_0",
+        "x" : -480,
+        "y" : -200
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DTuicbHwayClW6aY4iXHH$$VwZgaFVJX_-224G5qaLnA",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "ROmgkFUm4lgvqx7KFg5AE$$s05K612HEB98IDwxY4L8N",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "templatesExts" : null,
+        "code" : "def abc():\n    print(\"Hello world\")",
+        "valueInLogs" : true,
+        "opArgs" : null,
+        "templatesDict" : null,
+        "taskId" : null,
+        "opKwargs" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "PPKqzYEVFoBzHrkVRpAa8$$2MaYGEtn_GmBM0S-9e8Rw" : {
+      "id" : "PPKqzYEVFoBzHrkVRpAa8$$2MaYGEtn_GmBM0S-9e8Rw",
+      "component" : "DatabricksPipeline",
+      "metadata" : {
+        "label" : "DatabricksPipeline_1",
+        "slug" : "DatabricksPipeline_1",
+        "x" : -260,
+        "y" : -200
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "wALCHwgGgqQWrlYXSZrux$$pmNPjiQ-19izGC-QXD39y",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "6BcaYnGm2OP8OkTaKald8$$ZeKZ3kN0_Ak-9mgmQkwqc",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "runJson" : null,
+        "databricksConnId" : "",
+        "clusterSize" : "1/small",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "sdfsdf",
+            "optional" : false,
+            "kind" : {
+              "type" : "record",
+              "fields" : [ {
+                "name" : "asdf",
+                "optional" : false,
+                "kind" : {
+                  "type" : "string",
+                  "value" : "sdf"
+                },
+                "isReferenced" : false,
+                "isWorkflowNodeConfiguration" : false
+              } ]
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "anot",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "asdf"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "spexpr",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "concat(a,b)"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          }, {
+            "name" : "anotherstr",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "Config.anot"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          } ],
+          "instances" : {
+            "HelloWorld" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : {
+            "type" : "literal",
+            "value" : "default"
+          }
+        },
+        "taskId" : null,
+        "pipelineId" : {
+          "type" : "literal",
+          "value" : "pipelines/customers_orders"
+        }
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "UvCM55tpFPlHOIwnxJNpV$$qzfYs_Hos3pS77v6feNv9",
+    "source" : "NzIaMKxWfPi3kpndADjR2$$BCXmjdjFWzqz0s_KPvXSo",
+    "target" : "PPKqzYEVFoBzHrkVRpAa8$$2MaYGEtn_GmBM0S-9e8Rw",
+    "sourcePort" : "ROmgkFUm4lgvqx7KFg5AE$$s05K612HEB98IDwxY4L8N",
+    "targetPort" : "wALCHwgGgqQWrlYXSZrux$$pmNPjiQ-19izGC-QXD39y"
+  } ]
+}

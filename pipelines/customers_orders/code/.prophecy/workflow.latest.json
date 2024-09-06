@@ -1,0 +1,1063 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : false,
+      "plibVersion" : {
+        "mavenVersion" : "8.1.0",
+        "pyPiVersion" : "1.9.10"
+      }
+    },
+    "id" : "1",
+    "uri" : "pipelines/customers_orders",
+    "pipelineSettingsInfo" : {
+      "hasApplication" : false
+    },
+    "language" : "python",
+    "fabricId" : "3370",
+    "frontEndLanguage" : "python",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "abhishekse2etestsprophecyioteam.helloworld.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.webapp.functions", "prophecy.streaming.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "sdfsdf",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "asdf",
+              "kind" : {
+                "type" : "string",
+                "value" : "sdf"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "anot",
+          "kind" : {
+            "type" : "string",
+            "value" : "asdf"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "spexpr",
+          "kind" : {
+            "type" : "string",
+            "value" : "concat(a,b)"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "anotherstr",
+          "kind" : {
+            "type" : "string",
+            "value" : "Config.anot"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "42",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "45",
+      "projectName" : "ProphecyWebAppPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "44",
+      "projectName" : "ProphecyStreamingPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "43",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "425",
+    "source" : "Source_28006",
+    "sourcePort" : "65082",
+    "target" : "Join_98619",
+    "targetPort" : "47810"
+  }, {
+    "id" : "745",
+    "source" : "Source_51275",
+    "sourcePort" : "83296",
+    "target" : "Join_98619",
+    "targetPort" : "2322"
+  }, {
+    "id" : "829",
+    "source" : "Join_98619",
+    "sourcePort" : "31576",
+    "target" : "Reformat_5054",
+    "targetPort" : "94427"
+  }, {
+    "id" : "386",
+    "source" : "Reformat_5054",
+    "sourcePort" : "16363",
+    "target" : "Aggregate_74495",
+    "targetPort" : "42999"
+  }, {
+    "id" : "884",
+    "source" : "Aggregate_74495",
+    "sourcePort" : "96556",
+    "target" : "Target_63106",
+    "targetPort" : "17728"
+  }, {
+    "id" : "G-Lrj0n4z9Ze-TrioN-Rq",
+    "source" : "Join_98619",
+    "sourcePort" : "31576",
+    "target" : "mXRhsc6Rqripgj5D_XmZM$$GWvo1YlACv3LycB29YTTt",
+    "targetPort" : "U4fWKUyGDMPC81H51Mq99$$zrWM3vhhU5OWhfJ7pL3x-"
+  }, {
+    "id" : "B96UgoAV9MsJM3R-pjA2G$$70QlZmoyZnYcz3CtesFii",
+    "source" : "mXRhsc6Rqripgj5D_XmZM$$GWvo1YlACv3LycB29YTTt",
+    "sourcePort" : "nyyXBOoF9VzosW4JU2jeG$$iXMftE0T9-JzxxMnHvTwK",
+    "target" : "R8I_x75Ou0erK_AZiVIcm$$NDB967-es75a5e1KyVhrR",
+    "targetPort" : "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe"
+  } ],
+  "processes" : {
+    "Join_98619" : {
+      "id" : "Join_98619",
+      "component" : "Join",
+      "metadata" : {
+        "label" : "By CustomerId",
+        "slug" : "By_CustomerId",
+        "x" : 300,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Links customer orders with their account opening dates and personal details for better understanding of customer behavior.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "47810",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "order_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "customer_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_status",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_category",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        }, {
+          "id" : "2322",
+          "slug" : "in1",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "31576",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "conditions" : [ {
+          "alias" : "in1",
+          "expression" : {
+            "format" : "python",
+            "expression" : "(col(\"in0.customer_id\") == col(\"in1.customer_id\"))"
+          },
+          "joinType" : "inner"
+        } ],
+        "expressions" : [ {
+          "target" : "account_open_date",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"in1.account_open_date\")"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "order_id",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"in0.order_id\")"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "amount",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"in0.amount\")"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"in1.first_name\")"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "last_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"in1.last_name\")"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "hints" : [ {
+          "id" : "47810",
+          "alias" : "in0",
+          "hintType" : "none",
+          "propagateColumns" : false
+        }, {
+          "id" : "2322",
+          "alias" : "in1",
+          "hintType" : "none",
+          "propagateColumns" : false
+        } ],
+        "allIn1" : null,
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "47810##customer_id", "2322##customer_id", "47810##amount", "47810##order_id", "2322##first_name", "2322##last_name", "2322##account_open_date" ],
+        "allIn0" : null,
+        "whereClause" : null,
+        "headAlias" : "in0"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=&tag=0.2.27.dev2&projectSubscriptionProjectId=42&path=gems/Join",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "R8I_x75Ou0erK_AZiVIcm$$NDB967-es75a5e1KyVhrR" : {
+      "id" : "R8I_x75Ou0erK_AZiVIcm$$NDB967-es75a5e1KyVhrR",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "reformat_data",
+        "slug" : "reformat_data",
+        "x" : 760,
+        "y" : -60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Streamlines customer account data by selecting key information for easier analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "WezTvINf7B71m9MjKNfMc$$8hVHG0VKDOBMuqHe2CUW0",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "account_open_date",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"account_open_date\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "order_id",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"order_id\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "amount",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"amount\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"first_name\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "last_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"last_name\")"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##first_name", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##order_id", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##account_open_date", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##amount", "yo-neTRZKJOQpmLoqXaQ4$$UuJrHpo-X9s-6rU90tcpe##last_name" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=&tag=0.2.27.dev2&projectSubscriptionProjectId=42&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "Target_63106" : {
+      "id" : "Target_63106",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "Customer Orders",
+        "slug" : "Customer_Orders",
+        "x" : 860,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Exports customer order data to a CSV file for reporting or further analysis.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "17728",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/customers_orders"
+      }
+    },
+    "Reformat_5054" : {
+      "id" : "Reformat_5054",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Cleanup",
+        "slug" : "Cleanup",
+        "x" : 500,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Streamlines account data by selecting key information for better analysis and reporting.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "94427",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "16363",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "account_open_date",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"account_open_date\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "order_id",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"order_id\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "amount",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"amount\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"first_name\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "last_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"last_name\")"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "94427##account_open_date", "94427##last_name", "94427##first_name", "94427##amount", "94427##order_id" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=&tag=0.2.27.dev2&projectSubscriptionProjectId=42&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "Source_51275" : {
+      "id" : "Source_51275",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Source1711977720535",
+        "slug" : "Source1711977720535",
+        "x" : 120,
+        "y" : 300,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Reads customer data from a CSV file, including information such as customer ID, name, contact details, account details, and country.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "83296",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/customers"
+      }
+    },
+    "Source_28006" : {
+      "id" : "Source_28006",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "Orders",
+        "slug" : "Orders",
+        "x" : 120,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Loads order data from a CSV file, enabling analysis of customer orders and their statuses.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "65082",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/orders"
+      }
+    },
+    "Aggregate_74495" : {
+      "id" : "Aggregate_74495",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Sum Amounts",
+        "slug" : "Sum_Amounts",
+        "x" : 680,
+        "y" : 220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Aggregates customer orders by their account opening dates, providing a snapshot of initial transactions.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "42999",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "96556",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "allIns" : false,
+        "doPivot" : false,
+        "aggregate" : [ {
+          "target" : "order_id",
+          "expression" : {
+            "format" : "python",
+            "expression" : "first(col(\"order_id\"))"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "amount",
+          "expression" : {
+            "format" : "python",
+            "expression" : "first(col(\"amount\"))"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "first(col(\"first_name\"))"
+          },
+          "description" : "",
+          "_row_id" : null
+        }, {
+          "target" : "last_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "first(col(\"last_name\"))"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ],
+        "allowSelection" : true,
+        "pivotColumn" : null,
+        "pivotValues" : [ ],
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ "42999##last_name", "42999##account_open_date", "42999##order_id", "42999##first_name", "42999##amount" ],
+        "groupBy" : [ {
+          "target" : "account_open_date",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"account_open_date\")"
+          },
+          "description" : "",
+          "_row_id" : null
+        } ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=&tag=0.2.27.dev2&projectSubscriptionProjectId=42&path=gems/Aggregate",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "mXRhsc6Rqripgj5D_XmZM$$GWvo1YlACv3LycB29YTTt" : {
+      "id" : "mXRhsc6Rqripgj5D_XmZM$$GWvo1YlACv3LycB29YTTt",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "select_account_info",
+        "slug" : "select_account_info",
+        "x" : 560,
+        "y" : -60,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Placeholder for a function to retrieve account information.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "U4fWKUyGDMPC81H51Mq99$$zrWM3vhhU5OWhfJ7pL3x-",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "order_id",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "amount",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "nyyXBOoF9VzosW4JU2jeG$$iXMftE0T9-JzxxMnHvTwK",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "account_open_date",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"account_open_date\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "order_id",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"order_id\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "amount",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"amount\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "first_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"first_name\")"
+          },
+          "description" : ""
+        }, {
+          "target" : "last_name",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"last_name\")"
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ "U4fWKUyGDMPC81H51Mq99$$zrWM3vhhU5OWhfJ7pL3x-##account_open_date", "U4fWKUyGDMPC81H51Mq99$$zrWM3vhhU5OWhfJ7pL3x-##amount", "U4fWKUyGDMPC81H51Mq99$$zrWM3vhhU5OWhfJ7pL3x-##order_id", "U4fWKUyGDMPC81H51Mq99$$zrWM3vhhU5OWhfJ7pL3x-##first_name", "U4fWKUyGDMPC81H51Mq99$$zrWM3vhhU5OWhfJ7pL3x-##last_name" ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=&tag=0.2.27.dev2&projectSubscriptionProjectId=42&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
