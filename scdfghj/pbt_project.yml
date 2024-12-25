@@ -1,6 +1,6 @@
 name: sql_project_test_flatten_2
 description: ''
-version: 0.0.1
+version: szc
 author: abhisheks+e2etests@prophecy.io
 language: sql
 buildSystem: ''
