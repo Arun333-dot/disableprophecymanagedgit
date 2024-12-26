@@ -33,22 +33,22 @@
     }
   },
   "processes" : {
-    "3Lq0aeaZWFsVMumG0EOu9$$U1jjsNBM3_5zPqnjToFqj" : {
-      "id" : "3Lq0aeaZWFsVMumG0EOu9$$U1jjsNBM3_5zPqnjToFqj",
+    "6md8opa3tBqpxqxdnPmn3$$yT5Ew_FTDsE6pxcR-Y8v9" : {
+      "id" : "6md8opa3tBqpxqxdnPmn3$$yT5Ew_FTDsE6pxcR-Y8v9",
       "component" : "Model",
       "metadata" : {
-        "label" : "Model_0",
-        "slug" : "Model_0",
-        "x" : -560,
-        "y" : -260
+        "label" : "Model_2",
+        "slug" : "Model_2",
+        "x" : -640,
+        "y" : -800
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "-Zum0Bvb4yBAIPe8drSN5$$wVSfdFQR0xFgoHscat3md",
+          "id" : "UINRDkQF1kw7u_haznmQJ$$1m0jhYMrjjv1LjqjKNJEF",
           "slug" : ""
         } ],
         "outputs" : [ {
-          "id" : "8VfCUn0xG36TtfBHfBMIo$$WUDl9jAhbR6t2NE1DKOro",
+          "id" : "j6u3axsbr4c0HZN_eHZGn$$EIacMGQzauWLDRp8nC13g",
           "slug" : ""
         } ]
       },
@@ -69,25 +69,19 @@
         "execSeed" : true,
         "execRun" : false,
         "gitEntity" : "branch",
-        "model" : "18629/.prophecy/metadata/sqlmodels/jkhjgfcx",
-        "projectId" : "18629",
-        "runOnlyModel" : "true",
+        "projectId" : "18633",
+        "runOnlyModel" : "false",
         "loadingModels" : false,
         "entityName" : null,
         "gitEntityValueTag" : null,
         "profile" : "run_profile",
-        "sqlFabricId" : "7",
-        "gitEntityValue" : "dev",
+        "sqlFabricId" : "1880",
+        "gitEntityValue" : "main",
         "execDeps" : false,
         "gitEntityValueCommit" : null,
-        "gitEntityValueBranch" : "dev",
+        "gitEntityValueBranch" : "main",
         "execTest" : true,
-        "currentProjectModels" : [ {
-          "label" : "jkhjgfcx",
-          "value" : "jkhjgfcx",
-          "id" : "18629/.prophecy/metadata/sqlmodels/jkhjgfcx",
-          "name" : "jkhjgfcx"
-        } ]
+        "currentProjectModels" : [ ]
       }
     }
   },
