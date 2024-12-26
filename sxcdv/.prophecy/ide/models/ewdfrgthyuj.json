@@ -24,7 +24,7 @@
         "customQueryDisabled" : true,
         "customQuery" : false,
         "incrementalEditorDisabled" : true,
-        "query" : "SELECT * \n\nFROM databricks_large\n",
+        "query" : "SELECT * \n\nFROM FlattenSchema_1\n",
         "incrementalKey" : false,
         "incremental" : {
           "expression" : "true"
@@ -33,7 +33,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "YO2X5aBj",
-          "slug" : "databricks_large"
+          "slug" : "FlattenSchema_1"
         } ],
         "outputs" : [ {
           "id" : "j5MJ0LPp",
@@ -71,12 +71,59 @@
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       }
+    },
+    "GtMjO6gQvdFU93Nz8h5P7$$d6B-kWK4n0Be7IpJvimin" : {
+      "id" : "GtMjO6gQvdFU93Nz8h5P7$$d6B-kWK4n0Be7IpJvimin",
+      "component" : "FlattenSchema",
+      "metadata" : {
+        "label" : "FlattenSchema_1",
+        "slug" : "FlattenSchema_1",
+        "x" : -180,
+        "y" : -320,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Simplifies the data structure by selecting specific fields from a large dataset.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "columnsSelector" : [ "KmsiuBFkBuaTQ-e1MtW5R$$YCIC0SXJKcdSjBeWLoBTN##id", "KmsiuBFkBuaTQ-e1MtW5R$$YCIC0SXJKcdSjBeWLoBTN##department" ],
+        "flattenExpressions" : [ ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "id"
+          },
+          "alias" : "id"
+        }, {
+          "expression" : {
+            "expression" : "department"
+          },
+          "alias" : "department"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KmsiuBFkBuaTQ-e1MtW5R$$YCIC0SXJKcdSjBeWLoBTN",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "xdxmQInbQuirYrFZ7ErBD$$zqEWovEFURh0_90G3UJCs",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     }
   },
   "connections" : [ {
-    "id" : "4NBrLp-z48tQiOJPnjwBf",
+    "id" : "ZsrpXf1iQw3rJ9Ugc85-G",
     "source" : "ZE10vvRvwfZiW0bvOZpQY$$UKZiyYx_q6Tn0o3Z5xDwS",
     "sourcePort" : "eDLTZ_OjxKYpmDZYnCIP-$$8hyyYhutP6P9sHiLLWHjM",
+    "target" : "GtMjO6gQvdFU93Nz8h5P7$$d6B-kWK4n0Be7IpJvimin",
+    "targetPort" : "KmsiuBFkBuaTQ-e1MtW5R$$YCIC0SXJKcdSjBeWLoBTN"
+  }, {
+    "id" : "KxIcfIYs4Rc4zcXLKmqmw",
+    "source" : "GtMjO6gQvdFU93Nz8h5P7$$d6B-kWK4n0Be7IpJvimin",
+    "sourcePort" : "xdxmQInbQuirYrFZ7ErBD$$zqEWovEFURh0_90G3UJCs",
     "target" : "ewdfrgthyuj##CCw64IHp",
     "targetPort" : "YO2X5aBj"
   } ],

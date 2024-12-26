@@ -30,36 +30,12 @@ sqlModels:
       entityType: ''
       providerType: Databricks
       fields:
-      - name: age
+      - name: id
         dataType:
           type: Bigint
       - name: department
         dataType:
           type: String
-      - name: experience_years
-        dataType:
-          type: Bigint
-      - name: hobbies
-        dataType:
-          type: Array
-          dataType:
-            type: String
-      - name: id
-        dataType:
-          type: Bigint
-      - name: name
-        dataType:
-          type: String
-      - name: nested_array
-        dataType:
-          type: Array
-          dataType:
-            type: Array
-            dataType:
-              type: String
-      - name: salary
-        dataType:
-          type: Double
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
