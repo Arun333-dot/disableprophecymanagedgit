@@ -1,0 +1,84 @@
+{
+  "id" : "jkhjgfcx",
+  "metainfo" : {
+    "label" : "jkhjgfcx",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "jkhjgfcx##Ls3lFkit" : {
+      "id" : "jkhjgfcx##Ls3lFkit",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "jkhjgfcx",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM databricks_large\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Rxn2KxQD",
+          "slug" : "databricks_large"
+        } ],
+        "outputs" : [ {
+          "id" : "A9yY5NMr",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ZXGQwt8Qo8ib9IJ6lu2Sy" : {
+      "id" : "ZXGQwt8Qo8ib9IJ6lu2Sy",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "databricks_large",
+        "slug" : "databricks_large",
+        "x" : -500,
+        "y" : -220,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "databricks_large",
+          "sourceType" : "Source",
+          "sourceName" : "hive_metastore.rohit",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0o7NpwgsHdwfPJGwuDVhL",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "vAy1pJMjEeMAuO0nwmDr2",
+    "source" : "ZXGQwt8Qo8ib9IJ6lu2Sy",
+    "sourcePort" : "0o7NpwgsHdwfPJGwuDVhL",
+    "target" : "jkhjgfcx##Ls3lFkit",
+    "targetPort" : "Rxn2KxQD"
+  } ],
+  "component" : "Model"
+}
