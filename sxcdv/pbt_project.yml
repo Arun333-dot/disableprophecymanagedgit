@@ -120,6 +120,54 @@ sqlModels:
       sources: []
       snapshots: []
     createdAt: '2024-12-25 21:30:08'
+  .prophecy/metadata/sqlmodels/xszcdvfgbnhm:
+    name: xszcdvfgbnhm
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: age
+        dataType:
+          type: Bigint
+      - name: department
+        dataType:
+          type: String
+      - name: experience_years
+        dataType:
+          type: Bigint
+      - name: hobbies
+        dataType:
+          type: Array
+          dataType:
+            type: String
+      - name: id
+        dataType:
+          type: Bigint
+      - name: name
+        dataType:
+          type: String
+      - name: nested_array
+        dataType:
+          type: Array
+          dataType:
+            type: Array
+            dataType:
+              type: String
+      - name: salary
+        dataType:
+          type: Double
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/xszcdvfgbnhm.sql
+    - .prophecy/ide/models/xszcdvfgbnhm.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2024-12-26 06:38:13'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:

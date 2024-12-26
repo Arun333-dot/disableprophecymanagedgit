@@ -1,0 +1,799 @@
+{
+  "id" : "xszcdvfgbnhm",
+  "metainfo" : {
+    "label" : "xszcdvfgbnhm",
+    "autoLayout" : false,
+    "staleState" : "file",
+    "sourceSuggestions" : {
+      "sources" : [ {
+        "source" : {
+          "table" : {
+            "name" : "databricks_flatten_jsonarray",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "databricks_flatten_jsonarray",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "age", "department" ],
+            "conditions" : [ {
+              "alias" : "databricks_flatten_jsonarray",
+              "expression" : {
+                "expression" : "databricks_flatten_jsonarray.age = databricks_large.age AND databricks_flatten_jsonarray.department = databricks_large.department AND databricks_flatten_jsonarray.id = databricks_large.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "databricks_flatten_jsonarray.projects"
+              },
+              "alias" : "projects"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "databricks_flatten_jsonarray",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "age", "department" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "deeply_nested_json",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "deeply_nested_json",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "age", "name" ],
+            "conditions" : [ {
+              "alias" : "deeply_nested_json",
+              "expression" : {
+                "expression" : "deeply_nested_json.age = databricks_large.age AND deeply_nested_json.id = databricks_large.id AND deeply_nested_json.name = databricks_large.name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "deeply_nested_json.projects"
+              },
+              "alias" : "projects"
+            }, {
+              "expression" : {
+                "expression" : "deeply_nested_json.tags"
+              },
+              "alias" : "tags"
+            }, {
+              "expression" : {
+                "expression" : "deeply_nested_json.team"
+              },
+              "alias" : "team"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "deeply_nested_json",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "age", "name" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "json_empty_array",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "json_empty_array",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "age", "name" ],
+            "conditions" : [ {
+              "alias" : "json_empty_array",
+              "expression" : {
+                "expression" : "json_empty_array.age = databricks_large.age AND json_empty_array.id = databricks_large.id AND json_empty_array.name = databricks_large.name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "json_empty_array.nested_json"
+              },
+              "alias" : "nested_json"
+            }, {
+              "expression" : {
+                "expression" : "json_empty_array.tags"
+              },
+              "alias" : "tags"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "json_empty_array",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "age", "name" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "raw_customers",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "raw_customers",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "raw_customers",
+              "expression" : {
+                "expression" : "raw_customers.id = databricks_large.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "raw_customers.first_name"
+              },
+              "alias" : "first_name"
+            }, {
+              "expression" : {
+                "expression" : "raw_customers.last_name"
+              },
+              "alias" : "last_name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "raw_customers",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "raw_orders",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "raw_orders",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id" ],
+            "conditions" : [ {
+              "alias" : "raw_orders",
+              "expression" : {
+                "expression" : "raw_orders.id = databricks_large.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "raw_orders.user_id"
+              },
+              "alias" : "user_id"
+            }, {
+              "expression" : {
+                "expression" : "raw_orders.order_date"
+              },
+              "alias" : "order_date"
+            }, {
+              "expression" : {
+                "expression" : "raw_orders.status"
+              },
+              "alias" : "status"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "raw_orders",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id" ],
+          "isRecommended" : true
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "databricks123",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "databricks123",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "age", "department" ],
+            "conditions" : [ {
+              "alias" : "databricks123",
+              "expression" : {
+                "expression" : "databricks123.age = databricks_large.age AND databricks123.department = databricks_large.department AND databricks123.id = databricks_large.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "databricks123.projects"
+              },
+              "alias" : "projects"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "databricks123",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "age", "department" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "databricks_null",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "databricks_null",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "age", "department" ],
+            "conditions" : [ {
+              "alias" : "databricks_null",
+              "expression" : {
+                "expression" : "databricks_null.age = databricks_large.age AND databricks_null.department = databricks_large.department AND databricks_null.id = databricks_large.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "databricks_null.projects"
+              },
+              "alias" : "projects"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "databricks_null",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "age", "department" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "nested_arraysjosn",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "nested_arraysjosn",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "age", "department" ],
+            "conditions" : [ {
+              "alias" : "nested_arraysjosn",
+              "expression" : {
+                "expression" : "nested_arraysjosn.age = databricks_large.age AND nested_arraysjosn.department = databricks_large.department AND nested_arraysjosn.id = databricks_large.id"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "nested_arraysjosn.projects"
+              },
+              "alias" : "projects"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "nested_arraysjosn",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "age", "department" ],
+          "isRecommended" : false
+        } ]
+      }, {
+        "source" : {
+          "table" : {
+            "name" : "single_databricks",
+            "sourceName" : "hive_metastore.rohit",
+            "sourceType" : "ExternalSource"
+          }
+        },
+        "sourceComponentKind" : "ExternalSource",
+        "sourceLabel" : "single_databricks",
+        "canJoinWith" : [ {
+          "processLabel" : "databricks_large",
+          "processId" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+          "properties" : {
+            "activeTab" : "conditions",
+            "columnsSelector" : [ "id", "age", "name" ],
+            "conditions" : [ {
+              "alias" : "single_databricks",
+              "expression" : {
+                "expression" : "single_databricks.age = databricks_large.age AND single_databricks.id = databricks_large.id AND single_databricks.name = databricks_large.name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "expression" : {
+                "expression" : "single_databricks.projects"
+              },
+              "alias" : "projects"
+            }, {
+              "expression" : {
+                "expression" : "single_databricks.tags"
+              },
+              "alias" : "tags"
+            }, {
+              "expression" : {
+                "expression" : "single_databricks.team"
+              },
+              "alias" : "team"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.name"
+              },
+              "alias" : "name"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.experience_years"
+              },
+              "alias" : "experience_years"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.salary"
+              },
+              "alias" : "salary"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.hobbies"
+              },
+              "alias" : "hobbies"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.age"
+              },
+              "alias" : "age"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.nested_array"
+              },
+              "alias" : "nested_array"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.department"
+              },
+              "alias" : "department"
+            }, {
+              "expression" : {
+                "expression" : "databricks_large.id"
+              },
+              "alias" : "id"
+            } ],
+            "headAlias" : "single_databricks",
+            "allowSelection" : false
+          },
+          "joinColumns" : [ "id", "age", "name" ],
+          "isRecommended" : false
+        } ]
+      } ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "xszcdvfgbnhm##dZrCmUjI" : {
+      "id" : "xszcdvfgbnhm##dZrCmUjI",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "xszcdvfgbnhm",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM databricks_large\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "bXAfxAB3",
+          "slug" : "databricks_large"
+        } ],
+        "outputs" : [ {
+          "id" : "qvZ3OpcL",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz" : {
+      "id" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "databricks_large",
+        "slug" : "databricks_large",
+        "x" : -600,
+        "y" : -360,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "databricks_large",
+          "sourceType" : "Source",
+          "sourceName" : "hive_metastore.rohit",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "wp3yNlIlY5LxyG3WflP__$$nMuhiWbiC1l_75EHDDCmQ",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "RHt6A4qcffIHnCcmLF1re",
+    "source" : "ZZ7Vi0inGIkDsmmeDbcBg$$ptFPO7QET0bd8LBTen5oz",
+    "sourcePort" : "wp3yNlIlY5LxyG3WflP__$$nMuhiWbiC1l_75EHDDCmQ",
+    "target" : "xszcdvfgbnhm##dZrCmUjI",
+    "targetPort" : "bXAfxAB3"
+  } ],
+  "component" : "Model"
+}
