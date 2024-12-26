@@ -76,7 +76,7 @@
         "entityName" : null,
         "gitEntityValueTag" : null,
         "profile" : "run_profile",
-        "sqlFabricId" : "1880",
+        "sqlFabricId" : "7",
         "gitEntityValue" : "dev",
         "execDeps" : false,
         "gitEntityValueCommit" : null,
