@@ -1,0 +1,84 @@
+{
+  "id" : "ewdfrgthyuj",
+  "metainfo" : {
+    "label" : "ewdfrgthyuj",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "ewdfrgthyuj##CCw64IHp" : {
+      "id" : "ewdfrgthyuj##CCw64IHp",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "ewdfrgthyuj",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM databricks_large\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "YO2X5aBj",
+          "slug" : "databricks_large"
+        } ],
+        "outputs" : [ {
+          "id" : "j5MJ0LPp",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ZE10vvRvwfZiW0bvOZpQY$$UKZiyYx_q6Tn0o3Z5xDwS" : {
+      "id" : "ZE10vvRvwfZiW0bvOZpQY$$UKZiyYx_q6Tn0o3Z5xDwS",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "databricks_large",
+        "slug" : "databricks_large",
+        "x" : -660,
+        "y" : -300,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "databricks_large",
+          "sourceType" : "Source",
+          "sourceName" : "hive_metastore.rohit",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "eDLTZ_OjxKYpmDZYnCIP-$$8hyyYhutP6P9sHiLLWHjM",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "4NBrLp-z48tQiOJPnjwBf",
+    "source" : "ZE10vvRvwfZiW0bvOZpQY$$UKZiyYx_q6Tn0o3Z5xDwS",
+    "sourcePort" : "eDLTZ_OjxKYpmDZYnCIP-$$8hyyYhutP6P9sHiLLWHjM",
+    "target" : "ewdfrgthyuj##CCw64IHp",
+    "targetPort" : "YO2X5aBj"
+  } ],
+  "component" : "Model"
+}
