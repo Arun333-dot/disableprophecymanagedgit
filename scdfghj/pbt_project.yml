@@ -32,9 +32,9 @@ jobs:
     enabled: null
     createdAt: '2024-12-25 21:46:15'
     author: abhisheks+e2etests@prophecy.io
-    models:
-    - 18629/.prophecy/metadata/sqlmodels/jkhjgfcx
-    sqlProjects: []
+    models: []
+    sqlProjects:
+    - '18633'
 gemContainer:
   languageVersion: ''
   gemLibsVersion: ''
