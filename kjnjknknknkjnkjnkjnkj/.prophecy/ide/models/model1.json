@@ -1,0 +1,84 @@
+{
+  "id" : "model1",
+  "metainfo" : {
+    "label" : "model1",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "model1##Fr8WkwXB" : {
+      "id" : "model1##Fr8WkwXB",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "model1",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM databricks_large\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FQD7G1JA",
+          "slug" : "databricks_large"
+        } ],
+        "outputs" : [ {
+          "id" : "AwMYL6P1",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "-W22g2GG5SnGbGmClLWhC" : {
+      "id" : "-W22g2GG5SnGbGmClLWhC",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "databricks_large",
+        "slug" : "databricks_large",
+        "x" : -600,
+        "y" : -260,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "databricks_large",
+          "sourceType" : "Source",
+          "sourceName" : "hive_metastore.rohit",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "vfPYjILP88EVD_PBlM9py",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "GXCUqNIjp_kx2HRyFQ0v_",
+    "source" : "-W22g2GG5SnGbGmClLWhC",
+    "sourcePort" : "vfPYjILP88EVD_PBlM9py",
+    "target" : "model1##Fr8WkwXB",
+    "targetPort" : "FQD7G1JA"
+  } ],
+  "component" : "Model"
+}
