@@ -26,40 +26,7 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/model1:
     name: model1
-    schema:
-      entityType: ''
-      providerType: Databricks
-      fields:
-      - name: age
-        dataType:
-          type: Bigint
-      - name: department
-        dataType:
-          type: String
-      - name: experience_years
-        dataType:
-          type: Bigint
-      - name: hobbies
-        dataType:
-          type: Array
-          dataType:
-            type: String
-      - name: id
-        dataType:
-          type: Bigint
-      - name: name
-        dataType:
-          type: String
-      - name: nested_array
-        dataType:
-          type: Array
-          dataType:
-            type: Array
-            dataType:
-              type: String
-      - name: salary
-        dataType:
-          type: Double
+    schema: null
     description: null
     author: arunsharma@prophecy.io
     files:
@@ -98,37 +65,7 @@ sqlSources:
       schema:
         entityType: ''
         providerType: databricks
-        fields:
-        - name: age
-          dataType:
-            type: Bigint
-        - name: department
-          dataType:
-            type: String
-        - name: experience_years
-          dataType:
-            type: Bigint
-        - name: hobbies
-          dataType:
-            type: Array
-            dataType:
-              type: String
-        - name: id
-          dataType:
-            type: Bigint
-        - name: name
-          dataType:
-            type: String
-        - name: nested_array
-          dataType:
-            type: Array
-            dataType:
-              type: Array
-              dataType:
-                type: String
-        - name: salary
-          dataType:
-            type: Double
+        fields: []
       description: Employee data encompassing experience, department, salary, and
         personal interests, aiding in workforce analysis and talent management.
       author: arunsharma@prophecy.io
