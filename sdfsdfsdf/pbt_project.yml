@@ -1,6 +1,6 @@
 name: sp_project_spark
 description: ''
-version: 0.0.1
+version: v3
 author: arunsharma@prophecy.io
 language: python
 buildSystem: ''
