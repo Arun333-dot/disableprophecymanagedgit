@@ -30,7 +30,7 @@
           "spark.prophecy.metadata.is.interactive.run" : "false",
           "spark.prophecy.project.id" : "__PROJECT_ID_PLACEHOLDER__",
           "spark.prophecy.metadata.user.id" : "514",
-          "spark.prophecy.tasks" : "H4sIAAAAAAAAAKuuBQBDv6ajAgAAAA==",
+          "spark.prophecy.tasks" : "H4sIAAAAAAAAAKtWCsgsSM3JzEuNN1CyUiqAcor1i1PSYEipFgAlD9IQJgAAAA==",
           "spark.prophecy.metadata.job.branch" : "__PROJECT_RELEASE_VERSION_PLACEHOLDER__",
           "spark.prophecy.metadata.url" : "__PROPHECY_URL_PLACEHOLDER__",
           "spark.prophecy.execution.metrics.disabled" : "true",
@@ -82,5 +82,5 @@
     "clusterMode" : "Single"
   },
   "secret_scope" : "prophecy_jobs_67",
-  "sorted_processes" : [ ]
+  "sorted_processes" : [ "50LgrrQBTc9RG-aHWodzR" ]
 }
