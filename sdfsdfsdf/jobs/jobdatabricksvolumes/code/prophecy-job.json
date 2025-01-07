@@ -1,0 +1,81 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "4620",
+    "jobId" : "jobs/jobdatabricksvolumes",
+    "name" : "jobdatabricksvolumes",
+    "schedule" : "None",
+    "scheduleTimeZone" : "UTC",
+    "jobClusterMode" : {
+      "clusterMode" : "Single"
+    },
+    "enabled" : false,
+    "defaultClusterSize" : "small",
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    }
+  },
+  "processes" : {
+    "AHITA1k3Lr1nMKUNb1oH_$$uTkflZklz5y3ldGUfUcmY" : {
+      "id" : "AHITA1k3Lr1nMKUNb1oH_$$uTkflZklz5y3ldGUfUcmY",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_0",
+        "slug" : "Pipeline_0",
+        "x" : -1540,
+        "y" : -680
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1QcX7S-pVmKeRhDPrbKy5$$UcXpGHn03v6rnGpzBiIon",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "g8wRTSiMk-52BnnOJyxbc$$IxDT-YBniXt4PkAUIZXco",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        },
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      },
+      "properties" : {
+        "pipelineId" : "pipelines/sdfsdfsdfsd",
+        "configurations" : {
+          "schema" : [ ],
+          "instances" : {
+            "sp_project_spark" : [ "default" ]
+          },
+          "overrides" : { },
+          "selectedInstance" : "default"
+        }
+      }
+    }
+  },
+  "connections" : [ ]
+}
