@@ -1,0 +1,43 @@
+---
+version: 2
+sources:
+- name: "hive_metastore.dev"
+  database: "hive_metastore"
+  schema: "dev"
+  config:
+    enabled: true
+  tables:
+  - name: "customers"
+    description: "Customer data including their first order date, most recent order\
+      \ date, first name, last name, customer lifetime value, and number of orders."
+    quoting:
+      identifier: true
+    columns:
+    - name: "customer_id"
+      description: "The unique identifier for the customer"
+      dataType:
+        type: "Bigint"
+    - name: "first_name"
+      description: "First name of the customer"
+      dataType:
+        type: "String"
+    - name: "last_name"
+      description: "The last name of the customer"
+      dataType:
+        type: "String"
+    - name: "first_order"
+      description: "Date when the customer placed their first order"
+      dataType:
+        type: "Date"
+    - name: "most_recent_order"
+      description: "Date of the most recent order placed by the customer"
+      dataType:
+        type: "Date"
+    - name: "number_of_orders"
+      description: "The total number of orders placed by the customer"
+      dataType:
+        type: "Bigint"
+    - name: "customer_lifetime_value"
+      description: "The total value of purchases made by the customer over their lifetime"
+      dataType:
+        type: "Double"

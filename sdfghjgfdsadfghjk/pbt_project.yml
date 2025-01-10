@@ -1,0 +1,128 @@
+name: sql_project_to_model_user
+description: ''
+version: 0.0.1
+author: arunsharma@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2025-01-10 18:11:05'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/model:
+    name: model
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: customer_id
+        dataType:
+          type: Bigint
+      - name: first_name
+        dataType:
+          type: String
+      - name: last_name
+        dataType:
+          type: String
+      - name: first_order
+        dataType:
+          type: Date
+      - name: most_recent_order
+        dataType:
+          type: Date
+      - name: number_of_orders
+        dataType:
+          type: Bigint
+      - name: customer_lifetime_value
+        dataType:
+          type: Double
+    description: null
+    author: arunsharma@prophecy.io
+    files:
+    - models/model.sql
+    - .prophecy/ide/models/model.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-01-10 18:11:41'
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: arunsharma@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2025-01-10 18:11:06'
+sqlSeeds: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/hive_metastore_dev:
+    name: hive_metastore.dev
+    description: null
+    author: arunsharma@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-01-10 18:11:54'
+    tables:
+    - name: customers
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields:
+        - name: customer_id
+          dataType:
+            type: Bigint
+        - name: first_name
+          dataType:
+            type: String
+        - name: last_name
+          dataType:
+            type: String
+        - name: first_order
+          dataType:
+            type: Date
+        - name: most_recent_order
+          dataType:
+            type: Date
+        - name: number_of_orders
+          dataType:
+            type: Bigint
+        - name: customer_lifetime_value
+          dataType:
+            type: Double
+      description: Customer data including their first order date, most recent order
+        date, first name, last name, customer lifetime value, and number of orders.
+      author: arunsharma@prophecy.io
+      createdAt: '2025-01-10 18:11:54'
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: arunsharma@prophecy.io
+  createdAt: '2025-01-10 18:11:05'
+dependencies: []
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}

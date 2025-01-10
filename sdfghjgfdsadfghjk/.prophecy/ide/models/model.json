@@ -1,0 +1,84 @@
+{
+  "id" : "model",
+  "metainfo" : {
+    "label" : "model",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "model##sHUuuJZd" : {
+      "id" : "model##sHUuuJZd",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "model",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM customers\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "gAbclY7v",
+          "slug" : "customers"
+        } ],
+        "outputs" : [ {
+          "id" : "d3fRCzk7",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "2YBa9cq6xFCtofJo23k1U" : {
+      "id" : "2YBa9cq6xFCtofJo23k1U",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "customers",
+        "slug" : "customers",
+        "x" : -180,
+        "y" : 0,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "customers",
+          "sourceType" : "Source",
+          "sourceName" : "hive_metastore.dev",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xnJsj5mBLJjf5_KZREsTu",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "U-20sCVDaMs5vLj4fMi93$$lsFVBZsXAGDxBKP8m04E3",
+    "source" : "2YBa9cq6xFCtofJo23k1U",
+    "sourcePort" : "xnJsj5mBLJjf5_KZREsTu",
+    "target" : "model##sHUuuJZd",
+    "targetPort" : "gAbclY7v"
+  } ],
+  "component" : "Model"
+}
