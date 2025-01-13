@@ -1,6 +1,6 @@
 name: sql_project_to_model_user
 description: ''
-version: v567
+version: v56
 author: arunsharma@prophecy.io
 language: sql
 buildSystem: ''
